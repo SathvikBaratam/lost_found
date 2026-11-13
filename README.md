@@ -1,16 +1,29 @@
-# React + Vite
+# Campus Connect
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Campus Connect is a comprehensive campus utility web application featuring lost-and-found listings, study material sharing, and attendance tracking. 
 
-Currently, two official plugins are available:
+The project is structured as a monorepo that integrates a React (Vite) frontend with an Express and MongoDB backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠 Tech Stack
+* **Frontend:** React, Vite[cite: 4, 6]
+* **Backend:** Node.js, Express
+* **Database:** MongoDB Atlas
+* **Linting:** Oxlint (configured with `react` and `oxc` plugins)
+* **Task Runner:** Concurrently
 
-## React Compiler
+## 📂 Project Structure
+* `client/`: Contains the Vite-based React frontend app.
+* `server/`: Contains the Express server and API routes[cite: 4].
+* Root: Holds shared configurations, the main `package.json`[cite: 4], and `.gitignore`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Getting Started
 
-## Expanding the Oxlint configuration
+### Prerequisites
+* Node.js (v18 or higher recommended)
+* MongoDB Atlas account or local MongoDB instance
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/SathvikBaratam/lost_found.git](https://github.com/SathvikBaratam/lost_found.git)
+   cd lost_found
