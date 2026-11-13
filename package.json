@@ -1,0 +1,14 @@
+{
+  "name": "campus_connect",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monorepo: React (Vite) frontend + Express/MongoDB backend",
+  "scripts": {
+    "dev": "npm run dev --prefix client",
+    "server": "npm run start --prefix server",
+    "start": "concurrently \"npm run server\" \"npm run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.3"
+  }
+}

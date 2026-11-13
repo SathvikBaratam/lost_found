@@ -1,0 +1,6211 @@
+# Code Citations
+
+## License: unknown
+
+https://github.com/tujmon/educapp/blob/97709c0b8b936dab212eb124798146e7caf725b3/FrontEnd/educapp/src/components/Main/index.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            require
+````
+
+## License: unknown
+
+https://github.com/Swastik9837/Travels-Creators-Task-1/blob/6ad083515fb13c752734360806be6dac73278db1/Task%201/src/components/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            require
+````
+
+## License: unknown
+
+https://github.com/tujmon/educapp/blob/97709c0b8b936dab212eb124798146e7caf725b3/FrontEnd/educapp/src/components/Main/index.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            require
+````
+
+## License: unknown
+
+https://github.com/Swastik9837/Travels-Creators-Task-1/blob/6ad083515fb13c752734360806be6dac73278db1/Task%201/src/components/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            require
+````
+
+## License: unknown
+
+https://github.com/nithintata/connect/blob/bf4cc66f8f1f14507972dfbd84f0f1fb87dbf891/client/src/components/screens/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/radnerus/todo-with-firebase-auth/blob/5514011aad513a9b25c4924515cff293ed63376d/src/components/LoginPage.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/sreerag-pavithran/MERN-Stack/blob/13c82edc6c5463251e4e2f54f9b0b5b498828f86/Instagram%20Clone/client/src/components/screens/Signup.jsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Gladson9/gamefi/blob/2bd05931052021290bf6a3eba42ea81880f8845d/src/pages/SignUp.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/leandher/tracking-time/blob/1fa7e1d2a222a2e304f2a374fa4701dbeec9386f/src/pages/Register/index.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/tujmon/educapp/blob/97709c0b8b936dab212eb124798146e7caf725b3/FrontEnd/educapp/src/components/Main/index.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            require
+````
+
+## License: unknown
+
+https://github.com/Swastik9837/Travels-Creators-Task-1/blob/6ad083515fb13c752734360806be6dac73278db1/Task%201/src/components/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            require
+````
+
+## License: unknown
+
+https://github.com/nithintata/connect/blob/bf4cc66f8f1f14507972dfbd84f0f1fb87dbf891/client/src/components/screens/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/radnerus/todo-with-firebase-auth/blob/5514011aad513a9b25c4924515cff293ed63376d/src/components/LoginPage.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/sreerag-pavithran/MERN-Stack/blob/13c82edc6c5463251e4e2f54f9b0b5b498828f86/Instagram%20Clone/client/src/components/screens/Signup.jsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Gladson9/gamefi/blob/2bd05931052021290bf6a3eba42ea81880f8845d/src/pages/SignUp.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/leandher/tracking-time/blob/1fa7e1d2a222a2e304f2a374fa4701dbeec9386f/src/pages/Register/index.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/tujmon/educapp/blob/97709c0b8b936dab212eb124798146e7caf725b3/FrontEnd/educapp/src/components/Main/index.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            require
+````
+
+## License: unknown
+
+https://github.com/Swastik9837/Travels-Creators-Task-1/blob/6ad083515fb13c752734360806be6dac73278db1/Task%201/src/components/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            require
+````
+
+## License: unknown
+
+https://github.com/nithintata/connect/blob/bf4cc66f8f1f14507972dfbd84f0f1fb87dbf891/client/src/components/screens/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/radnerus/todo-with-firebase-auth/blob/5514011aad513a9b25c4924515cff293ed63376d/src/components/LoginPage.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/sreerag-pavithran/MERN-Stack/blob/13c82edc6c5463251e4e2f54f9b0b5b498828f86/Instagram%20Clone/client/src/components/screens/Signup.jsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Gladson9/gamefi/blob/2bd05931052021290bf6a3eba42ea81880f8845d/src/pages/SignUp.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/leandher/tracking-time/blob/1fa7e1d2a222a2e304f2a374fa4701dbeec9386f/src/pages/Register/index.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Amitchauhangit/SmartIoTKitchen/blob/a831dd180d3a1c4eeb35b209f83afa3ef450b1b8/Webapp-React-Frontend/src/app.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error
+````
+
+## License: unknown
+
+https://github.com/tujmon/educapp/blob/97709c0b8b936dab212eb124798146e7caf725b3/FrontEnd/educapp/src/components/Main/index.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            require
+````
+
+## License: unknown
+
+https://github.com/Swastik9837/Travels-Creators-Task-1/blob/6ad083515fb13c752734360806be6dac73278db1/Task%201/src/components/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            require
+````
+
+## License: unknown
+
+https://github.com/nithintata/connect/blob/bf4cc66f8f1f14507972dfbd84f0f1fb87dbf891/client/src/components/screens/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/radnerus/todo-with-firebase-auth/blob/5514011aad513a9b25c4924515cff293ed63376d/src/components/LoginPage.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/sreerag-pavithran/MERN-Stack/blob/13c82edc6c5463251e4e2f54f9b0b5b498828f86/Instagram%20Clone/client/src/components/screens/Signup.jsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Gladson9/gamefi/blob/2bd05931052021290bf6a3eba42ea81880f8845d/src/pages/SignUp.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/leandher/tracking-time/blob/1fa7e1d2a222a2e304f2a374fa4701dbeec9386f/src/pages/Register/index.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Amitchauhangit/SmartIoTKitchen/blob/a831dd180d3a1c4eeb35b209f83afa3ef450b1b8/Webapp-React-Frontend/src/app.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error
+````
+
+## License: unknown
+
+https://github.com/nithintata/connect/blob/bf4cc66f8f1f14507972dfbd84f0f1fb87dbf891/client/src/components/screens/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/radnerus/todo-with-firebase-auth/blob/5514011aad513a9b25c4924515cff293ed63376d/src/components/LoginPage.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/sreerag-pavithran/MERN-Stack/blob/13c82edc6c5463251e4e2f54f9b0b5b498828f86/Instagram%20Clone/client/src/components/screens/Signup.jsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Gladson9/gamefi/blob/2bd05931052021290bf6a3eba42ea81880f8845d/src/pages/SignUp.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/tujmon/educapp/blob/97709c0b8b936dab212eb124798146e7caf725b3/FrontEnd/educapp/src/components/Main/index.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Swastik9837/Travels-Creators-Task-1/blob/6ad083515fb13c752734360806be6dac73278db1/Task%201/src/components/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/leandher/tracking-time/blob/1fa7e1d2a222a2e304f2a374fa4701dbeec9386f/src/pages/Register/index.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Amitchauhangit/SmartIoTKitchen/blob/a831dd180d3a1c4eeb35b209f83afa3ef450b1b8/Webapp-React-Frontend/src/app.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error
+````
+
+## License: unknown
+
+https://github.com/leandher/tracking-time/blob/1fa7e1d2a222a2e304f2a374fa4701dbeec9386f/src/pages/Register/index.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/nithintata/connect/blob/bf4cc66f8f1f14507972dfbd84f0f1fb87dbf891/client/src/components/screens/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/radnerus/todo-with-firebase-auth/blob/5514011aad513a9b25c4924515cff293ed63376d/src/components/LoginPage.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/sreerag-pavithran/MERN-Stack/blob/13c82edc6c5463251e4e2f54f9b0b5b498828f86/Instagram%20Clone/client/src/components/screens/Signup.jsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Gladson9/gamefi/blob/2bd05931052021290bf6a3eba42ea81880f8845d/src/pages/SignUp.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/tujmon/educapp/blob/97709c0b8b936dab212eb124798146e7caf725b3/FrontEnd/educapp/src/components/Main/index.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Swastik9837/Travels-Creators-Task-1/blob/6ad083515fb13c752734360806be6dac73278db1/Task%201/src/components/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit"
+````
+
+## License: unknown
+
+https://github.com/Amitchauhangit/SmartIoTKitchen/blob/a831dd180d3a1c4eeb35b209f83afa3ef450b1b8/Webapp-React-Frontend/src/app.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error
+````
+
+## License: unknown
+
+https://github.com/leandher/tracking-time/blob/1fa7e1d2a222a2e304f2a374fa4701dbeec9386f/src/pages/Register/index.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up
+````
+
+## License: unknown
+
+https://github.com/nithintata/connect/blob/bf4cc66f8f1f14507972dfbd84f0f1fb87dbf891/client/src/components/screens/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up
+````
+
+## License: unknown
+
+https://github.com/radnerus/todo-with-firebase-auth/blob/5514011aad513a9b25c4924515cff293ed63376d/src/components/LoginPage.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up
+````
+
+## License: unknown
+
+https://github.com/sreerag-pavithran/MERN-Stack/blob/13c82edc6c5463251e4e2f54f9b0b5b498828f86/Instagram%20Clone/client/src/components/screens/Signup.jsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up
+````
+
+## License: unknown
+
+https://github.com/Gladson9/gamefi/blob/2bd05931052021290bf6a3eba42ea81880f8845d/src/pages/SignUp.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up
+````
+
+## License: unknown
+
+https://github.com/tujmon/educapp/blob/97709c0b8b936dab212eb124798146e7caf725b3/FrontEnd/educapp/src/components/Main/index.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up
+````
+
+## License: unknown
+
+https://github.com/Swastik9837/Travels-Creators-Task-1/blob/6ad083515fb13c752734360806be6dac73278db1/Task%201/src/components/Signup.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up
+````
+
+## License: unknown
+
+https://github.com/Amitchauhangit/SmartIoTKitchen/blob/a831dd180d3a1c4eeb35b209f83afa3ef450b1b8/Webapp-React-Frontend/src/app.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error
+````
+
+## License: unknown
+
+https://github.com/whenao31/ferreteria-reactiva/blob/f782a6870d959f03d89a2a9ee48ea5b26342b650/front-ui/src/context/authContext.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+
+```
+
+## License: unknown
+
+https://github.com/whenao31/ferreteria-reactiva/blob/f782a6870d959f03d89a2a9ee48ea5b26342b650/front-ui/src/context/authContext.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+
+```
+
+## License: unknown
+
+https://github.com/whenao31/ferreteria-reactiva/blob/f782a6870d959f03d89a2a9ee48ea5b26342b650/front-ui/src/context/authContext.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+
+```
+
+## License: unknown
+
+https://github.com/remcostoeten/minimalistic-portfolio/blob/823663abc540cf52ff8c001601a06a5b22bb48d0/components/user/user-avatar.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+```
+
+## License: unknown
+
+https://github.com/whenao31/ferreteria-reactiva/blob/f782a6870d959f03d89a2a9ee48ea5b26342b650/front-ui/src/context/authContext.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+
+```
+
+## License: unknown
+
+https://github.com/remcostoeten/minimalistic-portfolio/blob/823663abc540cf52ff8c001601a06a5b22bb48d0/components/user/user-avatar.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+```
+
+## License: unknown
+
+https://github.com/whenao31/ferreteria-reactiva/blob/f782a6870d959f03d89a2a9ee48ea5b26342b650/front-ui/src/context/authContext.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+
+```
+
+## License: unknown
+
+https://github.com/remcostoeten/minimalistic-portfolio/blob/823663abc540cf52ff8c001601a06a5b22bb48d0/components/user/user-avatar.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+```
+
+## License: unknown
+
+https://github.com/whenao31/ferreteria-reactiva/blob/f782a6870d959f03d89a2a9ee48ea5b26342b650/front-ui/src/context/authContext.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+
+```
+
+## License: unknown
+
+https://github.com/remcostoeten/minimalistic-portfolio/blob/823663abc540cf52ff8c001601a06a5b22bb48d0/components/user/user-avatar.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+```
+
+## License: unknown
+
+https://github.com/whenao31/ferreteria-reactiva/blob/f782a6870d959f03d89a2a9ee48ea5b26342b650/front-ui/src/context/authContext.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if
+```
+
+## License: unknown
+
+https://github.com/remcostoeten/minimalistic-portfolio/blob/823663abc540cf52ff8c001601a06a5b22bb48d0/components/user/user-avatar.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+```
+
+## License: unknown
+
+https://github.com/whenao31/ferreteria-reactiva/blob/f782a6870d959f03d89a2a9ee48ea5b26342b650/front-ui/src/context/authContext.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if
+```
+
+## License: unknown
+
+https://github.com/remcostoeten/minimalistic-portfolio/blob/823663abc540cf52ff8c001601a06a5b22bb48d0/components/user/user-avatar.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+```
+
+## License: unknown
+
+https://github.com/whenao31/ferreteria-reactiva/blob/f782a6870d959f03d89a2a9ee48ea5b26342b650/front-ui/src/context/authContext.js
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) return <p
+```
+
+## License: unknown
+
+https://github.com/remcostoeten/minimalistic-portfolio/blob/823663abc540cf52ff8c001601a06a5b22bb48d0/components/user/user-avatar.tsx
+
+````
+Great question! Here's how to set up Firebase Authentication for separate user accounts:
+
+## Step 1: Enable Firebase Authentication
+
+1. Go to **Firebase Console** → Your Project
+2. Click **Authentication** (left sidebar)
+3. Click **Get started**
+4. Enable **Email/Password** method
+5. Click **Save**
+
+## Step 2: Create an Auth Component
+
+Create [src/components/Auth/Login.jsx](src/components/Auth/Login.jsx):
+
+```jsx
+import { useState } from "react";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import "./Auth.css";
+
+export default function Login({ onAuthSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      onAuthSuccess();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+        <button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "10px", background: "transparent", color: "#3E7C59" }}
+        >
+          {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+        </button>
+      </div>
+    </div>
+  );
+}
+````
+
+## Step 3: Create [src/components/Auth/Auth.css](src/components/Auth/Auth.css):
+
+```css
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.auth-box {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-lost);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  color: #e8a33d;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+```
+
+## Step 4: Update [App.jsx](src/App.jsx) to check authentication:
+
+```jsx
+import { useState, useEffect } from "react";
+import { auth } from "./firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import "./App.css";
+import Login from "./components/Auth/Login";
+import LostFoundPage from "./components/LostFound";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+```

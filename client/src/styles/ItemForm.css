@@ -1,0 +1,32 @@
+.item-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 300px;
+}
+
+.item-form input,
+.item-form textarea,
+.item-form select {
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--color-text);
+}
+
+.item-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.item-form button {
+  background: var(--color-text);
+  color: var(--color-surface);
+  border: none;
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
