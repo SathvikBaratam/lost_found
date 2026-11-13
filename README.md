@@ -1,4 +1,4 @@
-# Campus Connect
+# Lost and Found
 
 Campus Connect is a comprehensive campus utility web application featuring lost-and-found listings, study material sharing, and attendance tracking. 
 
